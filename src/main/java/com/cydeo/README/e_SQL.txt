@@ -24,3 +24,55 @@ Data types in SQL Queries:
 
 SQL STATEMENTS
 
+    • First, we specify a list of columns in the table from which we want to query data in the SELECT statement. We use a comma between each column in case we want to query data from multiple columns.
+    • If we want to query data from all column, we can use an asterisk ( * ) as the shorthand for all columns.
+    • Second, we indicate the table name after the FROM keyword
+    • SQL language is case INSENSITIVE
+
+    example: SELECT column1, column2 FROM tableName;
+
+SELECT STATEMENT
+
+• SELECT * FROM TableName;
+• SELECT ColumnName FROM TableName;
+• SELECT ColumnName1, ColumnName2 ... FROM TableName;
+• SELECT Column(s) FROM TableName1, TableName2 ;
+
+
+DISTINCT
+
+• The DISTINCT keyword can be used to return only distinct (different) values.
+
+        SELECT DISTINCT column1, column2… FROM table name ;
+
+
+WHERE STATEMENT
+
+• The WHERE clause appears right after the FROM clause of the SELECT statement.
+• The conditions are used to filter the rows returned from the SELECT statement.
+• SQL provides us with various standard operators to construct the conditions.
+
+        SELECT column_1, column_2.. column_n
+        FROM table_name
+        WHERE conditions;
+
+
+Where statement operators: = < > >= <= <> != AND OR
+
+COUNT STATEMENT
+
+• The COUNT function returns the number of input rows that match a specific condition of a query.
+
+            How many departments do we have ?
+
+• Similar to the COUNT(*) function, the COUNT(column) function returns the number of rows returned by a SELECT clause.
+• However, it does not consider NULL values in the column.
+
+• We can also use COUNT with DISTINCT, for example;
+
+        How many unique name we have ?
+
+
+
+
+
