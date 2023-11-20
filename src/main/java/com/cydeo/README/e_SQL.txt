@@ -1,0 +1,26 @@
+
+
+• SQL - > STRUCTURED QUERY LANGUAGE
+
+• SQL is a language that is used to work with Databases and manipulate data.
+
+SQL is combined with four languages:
+    •Data Query Language(DQL)
+    •Data Definition Language (DDL)
+    •Data Control Language (DCL)
+    •Data Manipulation Language (DML):
+
+Query:  Set of instructions
+        Telling Database Management System that what we would like to do.
+
+Data types in SQL Queries:
+
+    -   Int & Integer : whole numbers
+    -   Decimal : decimal numbers
+    -   Varchar : string
+    -   Date : YYYY-MM-DD
+    -   Timestamp : YYYY-MM-DD HH:MM:SS
+    -   Boolean : true & false, Boolean expressions
+
+SQL STATEMENTS
+
