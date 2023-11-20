@@ -15,3 +15,22 @@
 4 - Then you can open and use the PgAdmin4
 
     - At the first opening, we will be asked to set a master password too
+
+
+How to use DB via IntelliJ
+
+1 - Open the project and go to the very right side of the screen and find Database next to Maven
+
+2 - In the Database window, click on the + sign on the top left side
+
+3 - Choose Data Source and PostgreSQL from the menus
+
+4 - On the pop-up window:
+
+    -   Enter User (default is postgres)
+    -   Enter Password
+    -   Enter Database (name)
+    -   Test Connection
+    -   Apply and OK
+
+5 - Once we hit OK, we will have the database and have a console where we can type SQL codes
