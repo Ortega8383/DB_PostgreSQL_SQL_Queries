@@ -1,0 +1,39 @@
+
+
+Data:   Piece of information
+
+        We need to store all data somewhere, in an organized manner, where it is
+
+            -   secure,
+            -   easy to ready,
+            -   fast to read,
+            -   easy and fast to update.
+
+
+Database:   Systematic collection of data
+
+            • Database is a systematic collection of data.
+            • Databases support storage and manipulation of data.
+            • Databases make data management easy.
+
+            Database we use, stores the all data in tables
+
+    We have 2 types of databases:
+
+    Relational Database: Tables are related to each other using Primary and Foreign keys
+
+    Non-Relational Database: All Data are in Key & Value format (like JSON format)
+
+
+Database Management System
+
+    •Creates, maintains and organizes the database
+    •Easier to manage the database
+    •Improves the availability of the information
+    •Does have backup system
+
+RDBMS: Relational Database Management System
+
+    • All RDBMS using SQL language
+    • Relational Database --> tables are related to each other using Primary and Foreign keys
+
