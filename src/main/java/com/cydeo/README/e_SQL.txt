@@ -80,6 +80,8 @@ SELECT column 1, column 2
 FROM table name
 ORDER BY column_1 ASC / DESC;
 
+If we don't state asc or desc, it sorts asc as a default.
+
 BETWEEN STATEMENT
 
 We use the BETWEEN operator to match a value against a range of values.
