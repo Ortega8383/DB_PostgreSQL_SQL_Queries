@@ -1,0 +1,17 @@
+
+
+1 - Go to the website via link below:
+
+    https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+2 - Choose the latest version of PostgreSQL for Windows and click to download it
+
+3 - Then install it to the computer
+
+    - During the installation:
+
+        -   You will be asked username (default: postgres) and a password
+
+4 - Then you can open and use the PgAdmin4
+
+    - At the first opening, we will be asked to set a master password too
