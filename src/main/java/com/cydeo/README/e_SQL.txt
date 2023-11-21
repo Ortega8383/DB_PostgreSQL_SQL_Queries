@@ -514,7 +514,78 @@ SELECT e1.first_name, e1.last_name, e1.manager_id, e2.last_name
 FROM employees e1 JOIN employees e2
 ON e1.manager_id = e2. employee_id;
 
+========================================================================================================================
+
+SET OPERATORS
+
+• UNION, UNION ALL, INTERSECT, EXCEPT
+
+• For SET operators to work:
+    -> You need 2 independent queries
+    -> Same number of columns in Select statement
+    -> Same data type in same order
+
+UNION operator combines result sets of two or more SELECT statements into a single result set.
+
+    SELECT column 1, column 2 … FROM Table1
+    UNION
+    SELECT column1, column 2 … FROM Table 2
+
+• The following are rules applied to the queries:
+• Both queries must return the same number of columns.
+• The corresponding columns in the queries must have compatible data types.
+• The UNION operator removes all duplicate rows unless the UNION ALL is used.
+• We often use the UNION operator to combine data from similar tables that are not perfectly normalized.
+
+Examples:
+
+-- union removes the duplicates
+select * from developers
+union
+select * from testers;
+
+-- union all gets all incl. duplicates
+-- compares the selected object(s)
+select * from developers
+union all
+select * from testers;
+
+EXCEPT
+
+• EXCEPT set operator returns records from first query that is not present in second query.
+• It will only return values (from 1st query) that are not common in 2 queries
+
+Examples:
+
+-- takes out the common ones from developers
+select names from developers
+except
+select names from testers;
+
+-- takes out the common ones from testers
+select names from testers
+except
+select names from developers;
 
 
+INTERSECT
+
+INTERSECT set operators returns records that are present/common/appear in both query results .
+• It will sort and remove duplicates.
+
+Examples:
+
+-- compares the selected object(s) and gets the common ones
+select names from testers
+intersect
+select names from developers;
+
+
+SUMMARY OF SET OPERATORS
+
+    • UNION -> combines, removes duplicates, sorts
+    • UNION ALL-> combines, does not remove duplicates, does not sort
+    • EXCEPT -> show records from query1 that are not present in query2
+    • INTERSECT -> show common records from 2 queries
 
 
