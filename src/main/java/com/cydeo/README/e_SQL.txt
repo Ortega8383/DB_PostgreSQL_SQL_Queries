@@ -409,6 +409,9 @@ DELETE
 DELETE FROM table_name
 WHERE condition;
 
+delete from scrumteam
+where jobtitle = 'Designer';
+
 
 
 
