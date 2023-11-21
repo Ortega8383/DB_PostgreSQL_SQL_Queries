@@ -643,6 +643,47 @@ Result: Scanning is way faster after we make indexing for name
 
 when we make indexing, it makes insertion of a new data slower. So, it is not reasonable to create index for all the columns
 
+FUNCTIONS
+
+create or replace function get_jobId_count_by_name (job_name varchar)
+    returns int
+    language plpgsql
+as
+    $$DECLARE
+        jobId_count integer;
+    BEGIN
+        select count(*)
+        into jobId_count
+        from employees
+        where job_id = job_name;
+
+        return jobId_count;
+    end
+    $$;
+
+select get_jobId_count_by_name('SA_REP')
+
+
+create or replace function get_employees_managed_by_id (mngr_id integer)
+    returns table
+        (
+            employee_firstname varchar,
+            employee_lastname varchar
+        )
+    language plpgsql
+as
+$$
+BEGIN
+    return query
+    select first_name, last_name
+    from employees
+    where manager_id = mngr_id;
+
+end
+$$;
+
+select * from get_employees_managed_by_id(103);
+
 
 
 
