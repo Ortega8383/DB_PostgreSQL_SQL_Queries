@@ -591,10 +591,27 @@ SUMMARY OF SET OPERATORS
 
 INDEX
 
+-   A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure.
+
+-   Indexes are used to quickly locate data without having to search every row in a database table every time a database table is accessed. Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access of ordered records.
+
 explain analyse
 select *
 from towns
 where name = '3340d83fff21b977b43b45017a526ebe';
+
+-- below code shows available indexes in the database
+select
+    tablename,
+    indexname,
+    indexdef
+from
+    pg_indexes
+where
+    schemaname = 'public'
+order by
+    tablename,
+    indexname;
 
 Index Scan using idx_towns_name on towns  (cost=0.42..8.44 rows=1 width=81) (actual time=1.158..1.161 rows=1 loops=1)
   Index Cond: (name = '3340d83fff21b977b43b45017a526ebe'::text)
