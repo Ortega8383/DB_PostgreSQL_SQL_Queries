@@ -197,7 +197,19 @@ Performs the action for multiple rows at once and returns single result
     where salary = (select max(salary) ===> inner query
                     from employees);
 
+OFFSET STATEMENT
 
+skips the given number of rows
+
+LIMIT STATEMENT
+
+gets only the given number of row(s)
+
+    select *
+    from employees
+    order by salary
+    offset 1  ===> skips the first row
+    limit 1;  ===> gets only one row from the result
 
 
 
