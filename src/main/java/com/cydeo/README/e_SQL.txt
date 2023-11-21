@@ -502,6 +502,18 @@ from employees e join departments d on e.department_id = d.department_id
 join locations l on d.location_id = l.location_id
 join countries c on l.country_id = c.country_id;
 
+SELF JOIN
+
+• Join the table to itself.
+• We use self join when we want to combine rows with other rows in the same table.
+• To perform the self join operation, we must use a table alias to help SQL distinguish the left table from the right table of the same table.
+
+Let’s say we want to print out employee full name with their manager’s name together.
+
+SELECT e1.first_name, e1.last_name, e1.manager_id, e2.last_name
+FROM employees e1 JOIN employees e2
+ON e1.manager_id = e2. employee_id;
+
 
 
 
