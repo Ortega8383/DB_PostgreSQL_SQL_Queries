@@ -212,6 +212,29 @@ gets only the given number of row(s)
     limit 1;  ===> gets only one row from the result
 
 
+GROUP BY STATEMENT
+
+Creates unique groups based on the given column
+
+-- we will create a table consisting of below columns
+-- job_id       avg salary      count people        total cost
+
+select job_id, avg(salary), count(*), sum(salary)
+from employees
+group by job_id;   ===> each unique job_id will be a group title
+
+HAVING STATEMENT
+
+Works very similar to where statement but used with/after group by statement
+
+-- get me the job_ids where their avg salary is more than 5k
+    select job_id, avg(salary)
+    from employees
+    group by job_id
+    having avg(salary) > 5000; ==> we filter after we group by
+                                   we can NOT use where statement here
+
+
 
 
 
