@@ -447,6 +447,45 @@ WHERE condition;
 delete from scrumteam
 where jobtitle = 'Designer';
 
+========================================================================================================================
+
+JOIN
+
+-- INNER JOIN (if we write only "join", it will be inner join by default and get only common data
+
+select first_name, last_name, address, phone
+from customer join address
+on customer.address_id = address.address_id;
+
+select first_name, last_name, address, phone
+from customer inner join address
+on customer.address_id = address.address_id;
+
+-- OUTER JOIN (we don't need to type "outer". It is enough to type "left", "right" or "full" to have an outer join)
+select first_name, last_name, address, phone
+from customer left join address
+on customer.address_id = address.address_id;
+
+select first_name, last_name, address, phone
+from customer left outer join address
+on customer.address_id = address.address_id;
+
+select first_name, last_name, address, phone
+from customer right join address
+on customer.address_id = address.address_id;
+
+select first_name, last_name, address, phone
+from customer right outer join address
+on customer.address_id = address.address_id;
+
+select first_name, last_name, address, phone
+from customer full join address
+on customer.address_id = address.address_id;
+
+select first_name, last_name, address, phone
+from customer full outer join address
+on customer.address_id = address.address_id;
+
 
 
 
