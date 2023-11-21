@@ -329,6 +329,29 @@ CREATE TABLE table_name
 •REFERENCES —OtherTable (PKColumn) — used to give foreign key to the column. We give the foreign key to the column by making Other table’s primary key column as the reference column
 IN ORDER TO HAVE FOREIGN KEY, WE MUST HAVE THE PRIMARY KEY IN OTHER TABLE
 
+/*
+
+create table syntax:
+
+    create table tableName (
+        colName1 dataType constraints(optional),
+        colName2 dataType constraints(optional),
+        colName3 dataType constraints(optional),
+        ...
+    );
+
+*/
+
+create table ScrumTeam (
+    Emp_ID Integer primary key,
+    FirstName varchar(30) not null,
+    LastName varchar(30) not null,
+    JobTitle varchar(20)
+);
+
+select *
+from scrumteam;
+
 DROP
 TRUNCATE
 ALTER
@@ -338,6 +361,39 @@ ALTER
 
 SELECT
 INSERT
+
+• When you create a new table, it does not have any data.
+• The first thing you often do is to insert new rows into the table.
+• SQL provides the INSERT statement that allows you to insert one or more rows into a table at a time.
+• To add multiple rows into a table at a time, you use the following syntax:
+
+INSERT INTO tableName (column1, column2,…)
+VALUES (value1, value2 … );
+
+• The value list must be in the same order as the columns list
+• After all the insertion is done, you have to commit them. If you don’t commit, it will not be entered in the database
+
+Syntax:
+commit; or commit work;
+
+We just need to do it one time at the end
+
+
+/*
+
+insert into tableName (column1, column2, ...)
+values (value1, value2, ...);
+
+Note: Primary key normally generated automatically, but here, we need to do it manually
+
+*/
+
+insert into scrumteam (emp_id, firstname, lastname, jobtitle)
+values (5, 'Mike', 'Smith', 'DB Manager');
+
+insert into scrumteam values (6, 'John', 'Doe', 'SDET');
+
+
 UPDATE
 DELETE
 
