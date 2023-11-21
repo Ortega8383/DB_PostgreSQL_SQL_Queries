@@ -303,6 +303,43 @@ from emailList;
 drop view emailList;
 
 
+------------------------------------------------------------------------------------------------------------------------
+
+DDL: Data Definition Language
+• It is used to define data structures
+
+CREATE
+
+•To create a new SQL table, you use the CREATE TABLE statement.
+•First, you specify the name of the new table after the CREATE TABLE clause
+
+CREATE TABLE table_name
+(column name TYPE constraint);
+
+•CONSTRAINT is NOT mandatory to give
+
+•Next, you list the column name, its data type, and column constraint. You can have multiple columns in a table, each column is separated by a comma (,). The column constraint defines the rules for the column e.g., NOT NULL.
+
+CREATE TABLE table_name
+(column name TYPE constraint);
+
+•NOT NULL — the value of the column cannot be NULL.
+•UNIQUE —the value of the column must be unique across the whole table.
+•PRIMARY KEY — Combination of both NOT NULL and UNIQUE constraints.
+•REFERENCES —OtherTable (PKColumn) — used to give foreign key to the column. We give the foreign key to the column by making Other table’s primary key column as the reference column
+IN ORDER TO HAVE FOREIGN KEY, WE MUST HAVE THE PRIMARY KEY IN OTHER TABLE
+
+DROP
+TRUNCATE
+ALTER
+
+• DML: Data Manipulation Language
+• It is used to define data itself
+
+SELECT
+INSERT
+UPDATE
+DELETE
 
 
 
