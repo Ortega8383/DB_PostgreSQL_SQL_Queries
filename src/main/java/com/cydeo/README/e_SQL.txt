@@ -395,7 +395,19 @@ insert into scrumteam values (6, 'John', 'Doe', 'SDET');
 
 
 UPDATE
+
+• First, specify the table name where you want to update the data after UPDATE clause.
+• Second, list the columns whose values you want to change in the SET clause.
+• Third, determine which rows you want to update in the condition of the WHERE clause.
+
 DELETE
+
+• To delete rows in a table, you use DELETE statement as follows:
+• Second, specify which row to delete by using the condition in the WHERE clause.
+• If you omit the WHERE clause, all rows in the table are deleted.
+
+DELETE FROM table_name
+WHERE condition;
 
 
 
