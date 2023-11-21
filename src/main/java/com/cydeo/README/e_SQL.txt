@@ -589,3 +589,41 @@ SUMMARY OF SET OPERATORS
     • INTERSECT -> show common records from 2 queries
 
 
+INDEX
+
+explain analyse
+select *
+from towns
+where name = '3340d83fff21b977b43b45017a526ebe';
+
+Index Scan using idx_towns_name on towns  (cost=0.42..8.44 rows=1 width=81) (actual time=1.158..1.161 rows=1 loops=1)
+  Index Cond: (name = '3340d83fff21b977b43b45017a526ebe'::text)
+Planning Time: 0.194 ms
+Execution Time: 1.483 ms
+
+
+explain analyse
+select *
+from towns
+where id = '1200';
+
+Index Scan using towns_id_key on towns  (cost=0.42..8.44 rows=1 width=81) (actual time=0.019..0.020 rows=1 loops=1)
+  Index Cond: (id = 1200)
+Planning Time: 0.107 ms
+Execution Time: 0.038 ms
+
+Note: Id is faster because we have key on id, because postgreSQL creates key for the Primary Keys
+
+
+create index idx_towns_name on towns(name);
+
+Index Scan using idx_towns_name on towns  (cost=0.42..8.44 rows=1 width=81) (actual time=0.062..0.063 rows=1 loops=1)
+  Index Cond: (name = '3340d83fff21b977b43b45017a526ebe'::text)
+Planning Time: 0.122 ms
+Execution Time: 0.081 ms
+
+Result: Scanning is way faster after we make indexing for name
+
+
+
+
