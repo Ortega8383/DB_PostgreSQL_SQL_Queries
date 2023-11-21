@@ -303,9 +303,9 @@ from emailList;
 drop view emailList;
 
 
-------------------------------------------------------------------------------------------------------------------------
+========================================================================================================================
 
-DDL: Data Definition Language
+DDL: Data Definition Language ------------------------------------------------------------------------------------------
 • It is used to define data structures
 
 CREATE
@@ -353,13 +353,48 @@ select *
 from scrumteam;
 
 DROP
+
+• To remove existing table from the database, you use the DROP TABLE
+statement as shown following:
+
+DROP TABLE table_name;
+
+-- delete the table from the database
+drop table scrumteam;
+
+
 TRUNCATE
+
+• Truncating will remove all data from the table but not delete the table
+
+TRUNCATE table_name;
+
+-- delete all data from the table
+truncate table scrumteam;
+
+
 ALTER
 
-• DML: Data Manipulation Language
+• To change existing table structure, you use ALTER TABLE statement.
+• The syntax of the ALTER TABLE is as follows:
+
+ALTER TABLE table_name action;
+
+The popular actions that we can do with alter keyword:
+- ADD COLUMN : adds column to the table
+- DROP COLUMN : drops the column from the table
+- RENAME COLUMN : renames the column name
+- RENAME TO : renames the table name
+
+
+
+• DML: Data Manipulation Language --------------------------------------------------------------------------------------
 • It is used to define data itself
 
 SELECT
+
+we already know this one
+
 INSERT
 
 • When you create a new table, it does not have any data.
