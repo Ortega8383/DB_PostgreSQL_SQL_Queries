@@ -933,6 +933,17 @@ SELECT AVG(Amount),sp_id
 FROM Sales
 GROUP BY sp_id;
 
+IF STATEMENT (CASE STATEMENT)
+
+select first_name, salary,
+       case
+           when salary < 7000 then 'UNDER PAID'
+            when salary > 7000 then 'PAID WELL'
+            else 'UNPAID'
+            end as category
+
+from employees;
+
 
 
 
