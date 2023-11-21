@@ -235,6 +235,21 @@ Works very similar to where statement but used with/after group by statement
                                    we can NOT use where statement here
 
 
+STRING FUNCTIONS
+
+• String || String -> String concatenation
+• LOWER -> Convert string to lower case
+• UPPER-> Convert string to upper case
+• LENGTH -> number of character in string
+• SUBSTRING -> extract substring
+
+-- how can we rename the column we display
+select first_name as "First Name", last_name as "surname"
+from employees;
+
+
+
+
 
 
 
