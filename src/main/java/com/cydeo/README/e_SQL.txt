@@ -155,6 +155,49 @@ ILIKE STATEMENT
     where first_name ilike '%c%'; ==> this includes C (uppercase C letter)
 
 
+AGGREGATE FUNCTIONS
+
+Performs the action for multiple rows at once and returns single result
+
+1. MIN
+2. MAX
+3. AVG
+4. SUM
+
+    Examples:
+
+    select min(salary)
+    from employees;
+
+    select max(salary)
+    from employees;
+
+    select sum(salary)
+    from employees;
+
+    select avg(salary)
+    from employees;
+
+    select round(avg(salary),1)
+    from employees;
+
+    -- how to find who is making the highest salary
+    select max(salary)
+    from employees;
+    -- max is 24000
+
+    select *
+    from employees
+    where salary = 24000;
+
+    below is a sub-query consisting of two nested queries (outer and inner)
+
+    select *      ===> outer query
+    from employees
+    where salary = (select max(salary) ===> inner query
+                    from employees);
+
+
 
 
 
