@@ -684,6 +684,28 @@ $$;
 
 select * from get_employees_managed_by_id(103);
 
+PROCEDURES
+
+Procedures are the functions changing the data itself, like DML
+
+create or replace procedure update_jobTitle_by_id (empId integer, job_title varchar)
+    language plpgsql
+as
+    $$
+    begin
+        update scrumteam
+        set jobtitle = job_title
+        where emp_id = empId;
+    end
+    $$;
+
+call update_jobTitle_by_id(5, 'Spring Developer');
+
+
+TRIGGERS
+
+
+
 
 
 
