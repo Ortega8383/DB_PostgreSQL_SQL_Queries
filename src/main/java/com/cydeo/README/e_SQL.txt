@@ -624,6 +624,8 @@ Execution Time: 0.081 ms
 
 Result: Scanning is way faster after we make indexing for name
 
+when we make indexing, it makes insertion of a new data slower. So, it is not reasonable to create index for all the columns
+
 
 
 
